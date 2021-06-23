@@ -13,7 +13,14 @@ export const openRootModal = (subMenuText = '') => (dispatch) => {
 };
 
 export const saveJson = (messageId) => {
-    console.log(messageId);
+    let array = [];
+    array.push(localStorage.getItem('messageId'));
+    array.push(messageId);
+    console.log(array);
+
+    localStorage.setItem('messageId', array);
+    console.log(localStorage.getItem('messageId'));
+
 };
 
 export const closeRootModal = () => (dispatch) => {
